@@ -4,7 +4,7 @@ This repo contains exercises to help you get started developing in OCaml.
 
 ## Installation
 
-1. Install the opam package manager
+### 1. Install the opam package manager
 
 On Linux, macOS, *BSD
 
@@ -21,13 +21,13 @@ $ winget install OCaml.opam
 $ opam init -ya
 ```
 
-2. Setup the OCaml development environment
+### 2. Setup the OCaml development environment
 
 ```bash
 opam install ocaml-lsp-server odoc ocamlformat utop
 ```
 
-3. Setup the editor
+### 3. Setup the editor
 
 * Install [vscode](https://code.visualstudio.com/).
 * Install [vscode ocaml platform](https://marketplace.visualstudio.com/items?itemName=ocamllabs.ocaml-platform).
