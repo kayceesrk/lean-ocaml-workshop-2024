@@ -60,7 +60,7 @@ let float_four = 4.
 
    val int_average : int -> int -> int
 
-   In Ocaml there's no explicit return statement: functions just return the
+   In OCaml there's no explicit return statement: functions just return the
    value of the last statement in that function. *)
 let int_average x y = failwith "For you to implement"
 

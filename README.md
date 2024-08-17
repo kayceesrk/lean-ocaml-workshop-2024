@@ -21,10 +21,10 @@ $ winget install OCaml.opam
 $ opam init -ya
 ```
 
-### 2. Setup the OCaml development environment
+### 2. Setup the OCaml development environment and dependencies
 
 ```bash
-opam install ocaml-lsp-server odoc ocamlformat utop
+opam install ocaml-lsp-server odoc ocamlformat utop async core js_of_ocaml js_of_ocaml-ppx merlin ocp-indent
 ```
 
 ### 3. Setup the editor
