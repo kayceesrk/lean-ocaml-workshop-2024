@@ -1,5 +1,3 @@
-;; -*- scheme -*-
-
 (library
  (name problem_9)
  (libraries base stdio)
