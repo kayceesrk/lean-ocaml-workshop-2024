@@ -59,3 +59,7 @@ pass.
   + [OCaml Programming: Correct + Efficient + Beautiful](https://cs3110.github.io/textbook/cover.html)
   + [Real World OCaml](https://dev.realworldocaml.org/)
   + [OCaml.org](https://ocaml.org/)
+
+## Acknowledgements
+
+Adapted from https://github.com/janestreet/learn-ocaml-workshop.
