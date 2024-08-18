@@ -1,5 +1,3 @@
-;; -*- Scheme -*-
-
 (alias
  (name DEFAULT) 
  (deps 
