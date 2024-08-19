@@ -16,6 +16,7 @@
 (documentation https://url/to/documentation)
 
 (package
+ (allow_empty)
  (name learn_ocaml_workshop_2024)
  (synopsis "A short synopsis")
  (description "A longer description")
