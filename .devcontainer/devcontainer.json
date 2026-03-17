@@ -1,0 +1,57 @@
+{
+    "name": "OCaml Learn Workshop",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "userEnvProbe": "loginInteractiveShell",
+    "runArgs": [
+        "--cap-add=SYS_PTRACE",
+        "--security-opt",
+        "seccomp=unconfined"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ocamllabs.ocaml-platform",
+                "ms-vscode.cpptools",
+                "eamodio.gitlens",
+                "streetsidesoftware.code-spell-checker",
+                "actboy168.tasks",
+                "hackwaly.ocamlearlybird"
+            ],
+            "settings": {
+                "ocaml.sandbox": {
+                    "kind": "opam",
+                    "switch": "5.2"
+                },
+                "editor.formatOnSave": true,
+                "[ocaml]": {
+                    "editor.defaultFormatter": "ocamllabs.ocaml-platform"
+                },
+                "tasks.buttons": [
+                    {
+                        "label": "▶ Run",
+                        "task": "▶ Run Exercise",
+                        "tooltip": "dune exec ./problem.exe in current file's directory"
+                    },
+                    {
+                        "label": "⚙ Build",
+                        "task": "⚙ Build Exercise",
+                        "tooltip": "dune build in current file's directory"
+                    },
+                    {
+                        "label": "🧹 Clean",
+                        "task": "🧹 Clean Exercise",
+                        "tooltip": "dune clean in current file's directory"
+                    }
+                ]
+            }
+        }
+    },
+    "postCreateCommand": "opam switch 5.2 && eval $(opam env) && chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh",
+    "remoteUser": "opam",
+    "remoteEnv": {
+        "OPAMSWITCH": "5.2"
+    }
+}

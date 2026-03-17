@@ -1,0 +1,28 @@
+{
+    "ocaml.sandbox": {
+        "kind": "opam",
+        "switch": "5.4.0"
+    },
+    "editor.formatOnSave": true,
+    "[ocaml]": {
+        "editor.defaultFormatter": "ocamllabs.ocaml-platform"
+    },
+    // Task Buttons in the status bar (actboy168.tasks extension)
+    "tasks.buttons": [
+        {
+            "label": "▶ Run",
+            "task": "▶ Run Exercise",
+            "tooltip": "dune exec ./problem.exe in current file's directory"
+        },
+        {
+            "label": "⚙ Build",
+            "task": "⚙ Build Exercise",
+            "tooltip": "dune build in current file's directory"
+        },
+        {
+            "label": "🧹 Clean",
+            "task": "🧹 Clean Exercise",
+            "tooltip": "dune clean in current file's directory"
+        }
+    ]
+}

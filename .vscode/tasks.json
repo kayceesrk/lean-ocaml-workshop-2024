@@ -1,0 +1,70 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "▶ Run Exercise",
+            "type": "shell",
+            "command": "eval $(opam env) && cd ${workspaceFolder} && dune runtest ${relativeFileDirname} --force",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "focus": true
+            },
+            "problemMatcher": {
+                "owner": "ocaml",
+                "fileLocation": [
+                    "relative",
+                    "${fileDirname}"
+                ],
+                "pattern": {
+                    "regexp": "^File \"(.+)\", line (\\d+), characters (\\d+)-(\\d+):$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "endColumn": 4
+                }
+            }
+        },
+        {
+            "label": "⚙ Build Exercise",
+            "type": "shell",
+            "command": "eval $(opam env) && cd ${fileDirname} && dune build .",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": {
+                "owner": "ocaml",
+                "fileLocation": [
+                    "relative",
+                    "${fileDirname}"
+                ],
+                "pattern": {
+                    "regexp": "^File \"(.+)\", line (\\d+), characters (\\d+)-(\\d+):$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "endColumn": 4
+                }
+            }
+        },
+        {
+            "label": "🧹 Clean Exercise",
+            "type": "shell",
+            "command": "eval $(opam env) && cd ${fileDirname} && dune clean",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
